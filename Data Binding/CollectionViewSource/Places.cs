@@ -20,6 +20,7 @@ namespace CollectionViewSource
             Add(new Place("San Jose", "CA"));
             Add(new Place("Santa Ana", "CA"));
             Add(new Place("Bellingham", "WA"));
+            Add(new Place("Bellinghamsss", "WA"));
         }
     }
 }
