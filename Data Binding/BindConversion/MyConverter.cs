@@ -19,7 +19,7 @@ namespace BindConversion
             switch (type.Name)
             {
                 case "String":
-                    return date.ToString("F", culture);
+                    return date.ToString(culture);
                 case "Brush":
                     return Brushes.Red;
                 default:
