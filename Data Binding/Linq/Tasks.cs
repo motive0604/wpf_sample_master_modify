@@ -16,6 +16,8 @@ namespace Linq
             Add(new Task("Clean", "Clean my office", 3, TaskType.Work));
             Add(new Task("Dinner", "Get ready for family reunion", 1, TaskType.Home));
             Add(new Task("Proposals", "Review new budget proposals", 2, TaskType.Work));
+            Add(new Task("Hallym", "University in chuncheon", 3, TaskType.Work));
+            Add(new Task("AHM", "Student in Hallym", 3, TaskType.Work));
         }
     }
 }

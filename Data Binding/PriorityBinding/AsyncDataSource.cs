@@ -9,6 +9,7 @@ namespace PriorityBinding
     {
         private string _slowerDp;
         private string _slowestDp;
+        private string _hallym;
         public string FastDp { get; set; }
 
         public string SlowerDp
@@ -33,6 +34,17 @@ namespace PriorityBinding
                 return _slowestDp;
             }
             set { _slowestDp = value; }
+        }
+        public string Hallym
+        {
+            get
+            {
+                // This simulates a lengthy time before the
+                // data being bound to is actualy available.
+                Thread.Sleep(7000);
+                return _hallym;
+            }
+            set { _hallym = value; }
         }
     }
 }

@@ -26,10 +26,13 @@
         <TextBlock Name="myconvertedtext"
             Foreground="{Binding Path=TheDate, Converter={StaticResource MyConverterReference}}">
             <TextBlock.Text>
-               <Binding Path="TheDate"
+                <Binding Path="TheDate"
                Converter="{StaticResource MyConverterReference}"/>
             </TextBlock.Text>
         </TextBlock>
+        <RadioButton IsChecked = "{Binding Path=TheDate, Converter={StaticResource MyConverterReference},ConverterCulture=en-US}">Eng</RadioButton>
+        <RadioButton IsChecked = "{Binding Path=TheDate, Converter={StaticResource MyConverterReference},ConverterCulture=ko-KR}">한글</RadioButton>
 
     </StackPanel>
 </Window>
+    

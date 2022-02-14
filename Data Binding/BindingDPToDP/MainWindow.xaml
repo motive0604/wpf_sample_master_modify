@@ -28,11 +28,17 @@
 
     <Border Margin="10" BorderBrush="Silver" BorderThickness="3" Padding="8">
         <DockPanel>
-            <TextBlock>Choose a Color:</TextBlock>
+            <TextBlock Text = "Choose a Color:" >
+                <TextBlock.Foreground>
+                    <Binding ElementName="myComboBox" Path="SelectedItem.Content"/>
+                </TextBlock.Foreground>
+            </TextBlock>
             <ComboBox Name="myComboBox" SelectedIndex="0">
                 <ComboBoxItem>Green</ComboBoxItem>
                 <ComboBoxItem>Blue</ComboBoxItem>
                 <ComboBoxItem>Red</ComboBoxItem>
+                <ComboBoxItem>Yellow</ComboBoxItem>
+                <ComboBoxItem>Black</ComboBoxItem>
             </ComboBox>
             <Canvas>
                 <Canvas.Background>

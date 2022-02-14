@@ -18,6 +18,7 @@
         <TextBlock Background="Honeydew" Width="100" HorizontalAlignment="Center">
             <TextBlock.Text>
                 <PriorityBinding FallbackValue="defaultvalue">
+                    <Binding Path="Hallym" IsAsync="True"/>
                     <Binding Path="SlowestDp" IsAsync="True"/>
                     <Binding Path="SlowerDp" IsAsync="True"/>
                     <Binding Path="FastDp" />

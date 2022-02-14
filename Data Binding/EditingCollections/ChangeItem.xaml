@@ -42,6 +42,9 @@
         <HeaderedContentControl Header="Date Offer Ends">
             <TextBox Width="150" Text="{Binding Path=OfferExpires, StringFormat=d, Mode=TwoWay}"/>
         </HeaderedContentControl>
+        <HeaderedContentControl Header="Name">
+            <TextBox Width="150" Text="{Binding Path=Name, Mode=TwoWay}"/>
+        </HeaderedContentControl>
         <StackPanel Orientation="Horizontal">
             <Button IsDefault="True" Click="Submit_Click">_Submit</Button>
             <Button IsCancel="True">_Cancel</Button>

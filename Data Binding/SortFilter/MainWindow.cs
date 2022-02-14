@@ -26,7 +26,7 @@ namespace SortFilter
         {
             var order = de as Order;
             //Return members whose Orders have not been filled
-            return (order?.Filled == "No");
+            return (order?.Filled == "Yes");
         }
 
         public void StartHere(object sender, DependencyPropertyChangedEventArgs args)

@@ -27,7 +27,10 @@ namespace BindConversion
             {
                 Console.WriteLine("22");
                 _thedate = value;
-                OnPropertyChanged("TheDate");
+
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("TheDate"));
+
+
             }
         }
 

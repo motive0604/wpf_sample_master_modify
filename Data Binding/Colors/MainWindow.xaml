@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Colors"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="682" Width="816">
     <!-- ************************   RESOURCES   ************************************ -->
     <Window.Resources>
         <local:ColorItemList x:Key="ColorList"/>
@@ -139,7 +139,7 @@
                     <Label Width="35" Content="{Binding Path=Value, Converter={StaticResource DoubleToString}}"/>
                 </StackPanel>
             </DockPanel>
-            <Button DockPanel.Dock="Top" Width="75" Height="25" Click="OnNewColorClicked">New Color</Button>
+            <Button DockPanel.Dock="Top" Width="75" Height="25" Click="OnNewColorClicked" ClickMode="Release">New Color</Button>
         </DockPanel>
 
         <!-- Color List Display -->
@@ -167,7 +167,7 @@
             <DockPanel DockPanel.Dock="Left">
                 <!-- Color Tile -->
                 <Border
-          Width="100" Height="100" Background="{Binding Path=Brush}">
+          Width="277" Height="268" Background="{Binding Path=Brush}">
                     <TextBlock
             HorizontalAlignment="Center"
             VerticalAlignment="Center"

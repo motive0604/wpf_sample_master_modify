@@ -5,22 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DataTrigger"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="428" Width="525">
     <Window.Resources>
         <local:Places x:Key="PlacesData"/>
 
         <Style TargetType="ListBoxItem">
             <Style.Triggers>
                 <DataTrigger Binding="{Binding Path=State}" Value="WA">
-                    <Setter Property="Foreground" Value="Red" />
+                    <Setter Property="Foreground" Value="Blue" />
                 </DataTrigger>
                 <MultiDataTrigger>
                     <MultiDataTrigger.Conditions>
                         <Condition Binding="{Binding Path=Name}" Value="Kirkland" />
+                    </MultiDataTrigger.Conditions>
+                    <Setter Property="Background" Value="Cyan" />
+                </MultiDataTrigger>
+                <MultiDataTrigger>
+                    <MultiDataTrigger.Conditions>
                         <Condition Binding="{Binding Path=State}" Value="WA" />
                     </MultiDataTrigger.Conditions>
                     <Setter Property="Background" Value="Cyan" />
                 </MultiDataTrigger>
+                
             </Style.Triggers>
         </Style>
 
@@ -33,10 +39,10 @@
             </Canvas>
         </DataTemplate>
     </Window.Resources>
-    <StackPanel>
+    <StackPanel x:Name="Text_t" Margin="0,0,0,-84">
         <TextBlock FontSize="18" Margin="5" FontWeight="Bold"
       HorizontalAlignment="Center">Data Trigger Sample</TextBlock>
         <ListBox Width="180" HorizontalAlignment="Center" Background="Gray"
-      ItemsSource="{Binding Source={StaticResource PlacesData}}"/>
+      ItemsSource="{Binding Source={StaticResource PlacesData}}" Height="293"/>
     </StackPanel>
 </Window>

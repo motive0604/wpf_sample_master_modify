@@ -21,7 +21,7 @@
                         <Task Name="Email" Priority="1" Type="Work">
                             <Description>Email Clients</Description>
                         </Task>
-                        <Task Name="Clean" Priority="3" Type="Work">
+                        <Task Name="Clean" Priority="3" Type="School">
                             <Description>Clean my office</Description>
                         </Task>
                         <Task Name="Dinner" Priority="1" Type="Home">

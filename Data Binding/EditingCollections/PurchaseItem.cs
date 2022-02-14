@@ -12,16 +12,19 @@ namespace EditingCollections
         private ItemData _currentData;
 
         public PurchaseItem()
-            : this("New item", 0, DateTime.Now)
+            : this("New item", 0, DateTime.Now, "name")
         {
         }
 
-        public PurchaseItem(string desc, double price, DateTime endDate)
+        public PurchaseItem(string desc, double price, DateTime endDate, string PName)
         {
             Description = desc;
             Price = price;
             OfferExpires = endDate;
+            Name = PName;
+
         }
+        
 
         public string Description
         {
@@ -61,14 +64,27 @@ namespace EditingCollections
                 }
             }
         }
+        public string Name
+        {
+            get { return _currentData.Name; }
+            set
+            {
+                if(_currentData.Name != value)
+                {
+                    _currentData.Name = value;
+                    NotifyPropertyChanged("Description");
+                }
+            }
+        }
 
-        public override string ToString() => $"{Description}, {Price:c}, {OfferExpires:D}";
+        public override string ToString() => $"{Description}, {Price:c}, {OfferExpires:D},{Name}$";
 
         private struct ItemData
         {
             internal string Description;
             internal DateTime OfferExpires;
             internal double Price;
+            internal string Name;
         }
 
         #region INotifyPropertyChanged Members

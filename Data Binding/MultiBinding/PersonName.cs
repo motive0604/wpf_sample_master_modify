@@ -7,9 +7,11 @@ namespace MultiBinding
     {
         public PersonName(string first, string last)
         {
+            a = "Mr.";
             FirstName = first;
             LastName = last;
         }
+        public string a { get; set; }
 
         public string FirstName { get; set; }
         public string LastName { get; set; }

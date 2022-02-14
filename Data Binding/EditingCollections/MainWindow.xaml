@@ -32,6 +32,10 @@
                           DisplayMemberBinding="{Binding Path=Description}"/>
                     <GridViewColumn Header="Price"
                           DisplayMemberBinding="{Binding Path=Price, StringFormat=c}"/>
+                    <GridViewColumn Header="Date"
+                          DisplayMemberBinding="{Binding Path=OfferExpires}"/>
+                    <GridViewColumn Header="Name"
+                          DisplayMemberBinding="{Binding Path=Name}"/>
                 </GridView>
             </ListView.View>
         </ListView>
