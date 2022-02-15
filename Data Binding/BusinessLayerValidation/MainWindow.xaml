@@ -8,6 +8,7 @@
         Title="MainWindow" Height="350" Width="525">
     <Window.Resources>
         <local:Person x:Key="Data"/>
+        <local:Class1 x:Key="Data1"/>
 
         <!--The tool tip for the TextBox to display the validation error message.-->
         <Style x:Key="TextBoxInError" TargetType="TextBox">
@@ -22,6 +23,25 @@
     </Window.Resources>
 
     <StackPanel Margin="20">
+        <TextBlock>Enter your Name:</TextBlock>
+        <TextBox Style="{StaticResource TextBoxInError}">
+            <TextBox.Text>
+                <!--By setting ValidatesOnExceptions to True, it checks for exceptions
+                that are thrown during the update of the source property.
+                An alternative syntax is to add <ExceptionValidationRule/> within
+                the <Binding.ValidationRules> section.-->
+                <Binding Path="Name" Source="{StaticResource Data1}"
+                         ValidatesOnExceptions="True"
+                         UpdateSourceTrigger="PropertyChanged">
+                    <Binding.ValidationRules>
+                        <!--DataErrorValidationRule checks for validation 
+                            errors raised by the IDataErrorInfo object.-->
+                        <!--Alternatively, you can set ValidationOnDataErrors="True" on the Binding.-->
+                        <DataErrorValidationRule/>
+                    </Binding.ValidationRules>
+                </Binding>
+            </TextBox.Text>
+        </TextBox>
         <TextBlock>Enter your age:</TextBlock>
         <TextBox Style="{StaticResource TextBoxInError}">
             <TextBox.Text>

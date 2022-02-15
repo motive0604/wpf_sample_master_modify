@@ -20,7 +20,12 @@ namespace FindingSourceElement
         {
             // You must cast the sender object as a Button element, or at least as FrameworkElement, to set Width
             var srcButton = e.Source as Button;
-            srcButton.Width = 200;
+            if (srcButton.Width == 100)
+                srcButton.Width = 200;
+            else if (srcButton.Width == 200)
+                srcButton.Width = 300;
+            else
+                srcButton.Width = 100;
         }
     }
 }

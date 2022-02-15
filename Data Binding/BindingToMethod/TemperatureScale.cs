@@ -40,10 +40,10 @@ namespace BindingToMethod
 
             switch (temptype)
             {
-                case TempType.Celsius:
-                    return (degree*9/5 + 32).ToString(CultureInfo.InvariantCulture) + " " + "Fahrenheit";
-                case TempType.Fahrenheit:
-                    return ((degree - 32)/9*5).ToString(CultureInfo.InvariantCulture) + " " + "Celsius";
+                case TempType.In:
+                    return (degree*0.4).ToString(CultureInfo.InvariantCulture) + " " + "In";
+                case TempType.ft:
+                    return (degree*0.03).ToString(CultureInfo.InvariantCulture) + " " + "ft";
             }
             return "Unknown Type";
         }

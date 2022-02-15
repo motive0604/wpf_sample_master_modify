@@ -24,7 +24,32 @@ namespace SearchingForElement
             {
                 // Following executed if Text element was found.
                 var wantedChild = wantedNode as TextBlock;
-                wantedChild.Foreground = Brushes.Blue;
+                if (wantedChild.Foreground == Brushes.Red)
+                    wantedChild.Foreground = Brushes.Black;
+                else
+                    wantedChild.Foreground = Brushes.Red;
+            }
+
+            var catNode = stackPanel.FindName("cat");
+            if (catNode is TextBlock)
+            {
+                // Following executed if Text element was found.
+                var wantedChild = catNode as TextBlock;
+                if (wantedChild.Foreground == Brushes.Yellow)
+                    wantedChild.Foreground = Brushes.Black;
+                else
+                    wantedChild.Foreground = Brushes.Yellow;
+            }
+
+            var fishNode = stackPanel.FindName("fish");
+            if (fishNode is TextBlock)
+            {
+                // Following executed if Text element was found.
+                var wantedChild = fishNode as TextBlock;
+                if(wantedChild.Foreground == Brushes.Blue)
+                    wantedChild.Foreground = Brushes.Black;
+                else
+                    wantedChild.Foreground = Brushes.Blue;
             }
         }
     }

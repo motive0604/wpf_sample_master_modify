@@ -18,11 +18,12 @@
                 <Setter Property="FontSize" Value="12"/>
             </Style>
         </StackPanel.Resources>
-        <Button Click="Find">Find element with the ID "dog" and change color</Button>
+        <Button Click="Find">Find element and change color</Button>
         <StackPanel Name="stackPanel">
             <TextBlock Name="cat">Cat</TextBlock>
             <TextBlock Name="dog">Dog</TextBlock>
             <TextBlock Name="fish">Fish</TextBlock>
+            <TextBlock Name="Person">Person</TextBlock>
         </StackPanel>
     </StackPanel>
 </Window>

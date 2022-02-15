@@ -35,7 +35,6 @@ namespace OverridingLogicalTree
                 }
             }
         }
-
         protected override IEnumerator LogicalChildren
         {
             get
@@ -54,15 +53,9 @@ namespace OverridingLogicalTree
         public new void AddLogicalChild(object child)
         {
             _child = (FrameworkElement) child;
-            if (Children.Count == 1)
-            {
-                RemoveLogicalChild(Children[0]);
-                Children.Add((UIElement) child);
-            }
-            else
-            {
-                Children.Add((UIElement) child);
-            }
+
+            Children.Add((UIElement) child);
+
         }
 
         public new void RemoveLogicalChild(object child)
