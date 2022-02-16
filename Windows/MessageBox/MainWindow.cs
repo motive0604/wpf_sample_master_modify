@@ -20,7 +20,9 @@ namespace MessageBox
         {
             // Configure the message box
             Window owner = ((bool) ownerCheckBox.IsChecked ? this : null);
-            var messageBoxText = this.messageBoxText.Text;
+            if (LastComboBox.Text == "None")
+                LastComboBox.Text = null;
+            var messageBoxText = this.messageBoxText.Text+LastComboBox.Text;
             var caption = this.caption.Text;
             var button = (MessageBoxButton) Enum.Parse(typeof (MessageBoxButton), buttonComboBox.Text);
             var icon = (MessageBoxImage) Enum.Parse(typeof (MessageBoxImage), imageComboBox.Text);
@@ -32,7 +34,7 @@ namespace MessageBox
             MessageBoxResult result;
             if (owner == null)
             {
-                result = System.Windows.MessageBox.Show(messageBoxText, caption, button, icon, defaultResult, options);
+                result = System.Windows.MessageBox.Show(messageBoxText,caption, button, icon, defaultResult, options);
             }
             else
             {

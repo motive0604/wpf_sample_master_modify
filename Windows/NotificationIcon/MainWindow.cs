@@ -24,8 +24,8 @@ namespace NotificationIcon
             // Configure and show a notification icon in the system tray
             _notifyIcon = new NotifyIcon
             {
-                BalloonTipText = @"Hello, NotifyIcon!",
-                Text = @"Hello, NotifyIcon!",
+                BalloonTipText = @"Hello, Hallym!",
+                Text = @"Hello, Hallym!",
                 Icon = new Icon("NotifyIcon.ico"),
                 Visible = true
             };

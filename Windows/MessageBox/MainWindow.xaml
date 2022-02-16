@@ -5,12 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MessageBox"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="400" Width="525">
     <Grid>
 
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto" />
-            <ColumnDefinition />
+            <ColumnDefinition Width="148.198" />
+            <ColumnDefinition Width="34.065"/>
+            <ColumnDefinition Width="85*" />
+            <ColumnDefinition Width="258*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition />
@@ -24,25 +26,25 @@
             <RowDefinition />
         </Grid.RowDefinitions>
 
-        <Label Grid.Column="0" Grid.Row="0">Associate with Owner Window?</Label>
-        <CheckBox Grid.Column="1" Grid.Row="0" Name="ownerCheckBox" />
+        <Label Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2">Associate with Owner Window?</Label>
+        <CheckBox Grid.Row="0" Name="ownerCheckBox" Grid.ColumnSpan="3" Margin="34,0,0,0" Grid.Column="1" />
 
-        <Label Grid.Column="0" Grid.Row="1">messageBoxText:</Label>
-        <TextBox Grid.Column="1" Grid.Row="1" Name ="messageBoxText">MessageBoxText</TextBox>
+        <Label Grid.Column="0" Margin="0,37,0,0" Grid.RowSpan="2" Grid.ColumnSpan="2">messageBoxText:</Label>
+        <TextBox Name ="messageBoxText" Grid.ColumnSpan="3" Margin="34,37,0,0" Grid.RowSpan="2" Grid.Column="1">MessageBoxText</TextBox>
 
-        <Label Grid.Column="0" Grid.Row="2">caption:</Label>
-        <TextBox Grid.Column="1" Grid.Row="2" Name="caption">Caption</TextBox>
+        <Label Grid.Column="0" Grid.Row="1" Margin="0,37,0,0" Grid.RowSpan="2" Grid.ColumnSpan="2">caption:</Label>
+        <TextBox Grid.Row="1" Name="caption" Grid.ColumnSpan="3" Margin="34,37,0,0" Grid.RowSpan="2" Grid.Column="1">Caption</TextBox>
 
-        <Label Grid.Column="0" Grid.Row="3">button:</Label>
-        <ComboBox Grid.Column="1" Grid.Row="3" Name="buttonComboBox">
+        <Label Grid.Column="0" Grid.Row="2" Margin="0,37,0,0" Grid.RowSpan="2" Grid.ColumnSpan="2">button:</Label>
+        <ComboBox Grid.Row="2" Name="buttonComboBox" Grid.ColumnSpan="3" Margin="34,37,0,0" Grid.RowSpan="2" Grid.Column="1">
             <ComboBoxItem IsSelected="True">OK</ComboBoxItem>
             <ComboBoxItem>OKCancel</ComboBoxItem>
             <ComboBoxItem>YesNo</ComboBoxItem>
             <ComboBoxItem>YesNoCancel</ComboBoxItem>
         </ComboBox>
 
-        <Label Grid.Column="0" Grid.Row="4">icon:</Label>
-        <ComboBox Grid.Column="1" Grid.Row="4" Name="imageComboBox">
+        <Label Grid.Column="0" Grid.Row="3" Margin="0,37,0,37" Grid.RowSpan="3" Grid.ColumnSpan="2">icon:</Label>
+        <ComboBox Grid.Row="3" Name="imageComboBox" Grid.ColumnSpan="3" Margin="34,37,0,37" Grid.RowSpan="3" Grid.Column="1">
             <ComboBoxItem>Asterisk</ComboBoxItem>
             <ComboBoxItem>Error</ComboBoxItem>
             <ComboBoxItem>Exclamation</ComboBoxItem>
@@ -54,8 +56,8 @@
             <ComboBoxItem>Warning</ComboBoxItem>
         </ComboBox>
 
-        <Label Grid.Column="0" Grid.Row="5">defaultResult:</Label>
-        <ComboBox Grid.Column="1" Grid.Row="5" Name="defaultResultComboBox">
+        <Label Grid.Column="0" Grid.Row="5" Margin="0,0,0,37" Grid.RowSpan="2" Grid.ColumnSpan="2">defaultResult:</Label>
+        <ComboBox Grid.Row="5" Name="defaultResultComboBox" Grid.ColumnSpan="3" Margin="34,0,0,37" Grid.RowSpan="2" Grid.Column="1">
             <ComboBoxItem>Cancel</ComboBoxItem>
             <ComboBoxItem>No</ComboBoxItem>
             <ComboBoxItem IsSelected="True">None</ComboBoxItem>
@@ -63,8 +65,8 @@
             <ComboBoxItem>Yes</ComboBoxItem>
         </ComboBox>
 
-        <Label Grid.Column="0" Grid.Row="6">options</Label>
-        <ComboBox Grid.Column="1" Grid.Row="6" Name="optionsComboBox">
+        <Label Grid.Column="0" Grid.Row="6" Margin="0,0,0,37" Grid.RowSpan="2" Grid.ColumnSpan="2">options</Label>
+        <ComboBox Grid.Row="6" Name="optionsComboBox" Grid.ColumnSpan="3" Margin="34,0,0,37" Grid.RowSpan="2" Grid.Column="1">
             <ComboBoxItem>DefaultDesktopOnly</ComboBoxItem>
             <ComboBoxItem IsSelected="True">None</ComboBoxItem>
             <ComboBoxItem>RightAlign</ComboBoxItem>
@@ -72,10 +74,20 @@
             <ComboBoxItem>ServiceNotification</ComboBoxItem>
         </ComboBox>
 
-        <Button Grid.Column="1" Grid.Row="7" Name="showMessageBoxButton" Click="ShowMessageBoxButton_Click">Show MessageBox</Button>
+        <Label Grid.Column="0" Grid.Row="7" Margin="0,0,0,37" Grid.RowSpan="2" Grid.ColumnSpan="2">Last</Label>
+        <ComboBox Grid.Row="7" Name="LastComboBox" Grid.ColumnSpan="3" Margin="34,0,0,37" Grid.RowSpan="2" Grid.Column="1">
+            <ComboBoxItem IsSelected="True">None</ComboBoxItem>
+            <ComboBoxItem>.</ComboBoxItem>
+            <ComboBoxItem>?</ComboBoxItem>
+            <ComboBoxItem>!</ComboBoxItem>
+            <ComboBoxItem>#</ComboBoxItem>
+            <ComboBoxItem>*</ComboBoxItem>
+        </ComboBox>
 
-        <StatusBar Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="8" >
-            <StatusBarItem>
+        <Button Grid.Row="8" Name="showMessageBoxButton" Click="ShowMessageBoxButton_Click" Grid.ColumnSpan="3" Margin="34,0,0,0" Grid.Column="1">Show MessageBox</Button>
+
+        <StatusBar Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="8" Margin="0,43,0,-58" >
+            <StatusBarItem Margin="0,1,0,16">
                 <TextBlock Name="resultTextBlock">Ready</TextBlock>
             </StatusBarItem>
         </StatusBar>
