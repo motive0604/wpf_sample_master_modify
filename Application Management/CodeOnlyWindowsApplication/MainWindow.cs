@@ -1,6 +1,7 @@
 // // Copyright (c) Microsoft. All rights reserved.
 // // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using Microsoft.Win32;
 using System;
 using System.Windows;
 using System.Windows.Controls;
@@ -35,11 +36,12 @@ namespace CodeOnlyWindowsApplication
             base.OnInitialized(e);
 
             // Create appearance
-            var closeButton = new Button {Content = "Close"};
+            var closeButton = new Button {Content = "Open"};
             Content = closeButton;
 
             // Define behavior
-            closeButton.Click += delegate { this.Close(); };
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            closeButton.Click += delegate { openFileDialog.ShowDialog();};
         }
     }
 }

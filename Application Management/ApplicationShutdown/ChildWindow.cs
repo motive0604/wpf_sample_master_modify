@@ -15,6 +15,7 @@ namespace ApplicationShutdown
         public ChildWindow()
         {
             InitializeComponent();
+            
         }
 
         private void ChildWindow_Closing(object sender, CancelEventArgs e)
@@ -24,11 +25,15 @@ namespace ApplicationShutdown
                 MessageBoxButton.YesNo,
                 MessageBoxImage.Question);
             e.Cancel = (result == MessageBoxResult.No);
+            
         }
 
         private void ChildWindow_Closed(object sender, EventArgs e)
         {
             Console.WriteLine(@"Closed");
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.newWindow.IsEnabled = true;
+            
         }
     }
 }

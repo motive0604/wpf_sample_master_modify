@@ -45,8 +45,8 @@
                                 <Setter TargetName="mainRect" Property="Fill">
                                     <Setter.Value>
                                         <RadialGradientBrush GradientOrigin="0.5,0.5">
-                                            <GradientStop Color="LightSkyBlue" Offset="0.0" />
-                                            <GradientStop Color="RoyalBlue" Offset="1.0" />
+                                            <GradientStop Color="Pink" Offset="0.0" />
+                                            <GradientStop Color="Red" Offset="1.0" />
                                         </RadialGradientBrush>
                                     </Setter.Value>
                                 </Setter>

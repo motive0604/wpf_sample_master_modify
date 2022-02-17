@@ -17,6 +17,7 @@ namespace SkinnedApplication
 
             // Add choices to combo box
             skinComboBox.Items.Add("Blue");
+            skinComboBox.Items.Add("Green");
             skinComboBox.Items.Add("Yellow");
             skinComboBox.SelectedIndex = 0;
 

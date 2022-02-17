@@ -14,6 +14,7 @@ namespace SkinnedApplication
         private void App_Startup(object sender, StartupEventArgs e)
         {
             Properties["Blue"] = (ResourceDictionary) LoadComponent(new Uri("BlueSkin.xaml", UriKind.Relative));
+            Properties["Green"] = (ResourceDictionary)LoadComponent(new Uri("GreenSkin.xaml", UriKind.Relative));
             Properties["Yellow"] = (ResourceDictionary) LoadComponent(new Uri("YellowSkin.xaml", UriKind.Relative));
 
             // Note: you can also use the following syntax:

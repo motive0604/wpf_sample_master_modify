@@ -8,6 +8,7 @@
         Title="MainWindow" SizeToContent="WidthAndHeight">
     <Window.Resources>
         <SolidColorBrush x:Key="MyBrush" Color="Gold"/>
+        <SolidColorBrush x:Key="MyBrush2" Color="Lime"/>
         <Style TargetType="Border" x:Key="PageBackground">
             <Setter Property="Background" Value="Blue"/>
         </Style>
@@ -33,9 +34,9 @@
             <DockPanel>
                 <TextBlock Style="{StaticResource TitleText}">Title</TextBlock>
                 <TextBlock Style="{StaticResource Label}">Label</TextBlock>
-                <TextBlock DockPanel.Dock="Top" HorizontalAlignment="Left" FontSize="36" Foreground="{StaticResource MyBrush}" Text="Text" Margin="20" />
+                <TextBlock DockPanel.Dock="Top" HorizontalAlignment="Left" FontSize="36" Foreground="{StaticResource MyBrush2}" Text="Text" Margin="20" />
                 <Button DockPanel.Dock="Top" HorizontalAlignment="Left" Height="30" Background="{StaticResource MyBrush}" Margin="40">Button</Button>
-                <Ellipse DockPanel.Dock="Top" HorizontalAlignment="Left" Width="100" Height="100" Fill="{StaticResource MyBrush}" Margin="40" />
+                <Ellipse DockPanel.Dock="Top" HorizontalAlignment="Left" Width="100" Height="100" Fill="{StaticResource MyBrush2}" Margin="40" />
             </DockPanel>
         </Border>
     </StackPanel>

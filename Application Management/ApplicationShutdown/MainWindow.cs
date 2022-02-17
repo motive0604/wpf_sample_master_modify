@@ -12,6 +12,7 @@ namespace ApplicationShutdown
     /// </summary>
     public partial class MainWindow : Window
     {
+        public static bool re = true;
         public MainWindow()
         {
             InitializeComponent();
@@ -37,6 +38,7 @@ namespace ApplicationShutdown
         private void newWindowButton_Click(object sender, RoutedEventArgs e)
         {
             (new ChildWindow()).Show();
+            newWindow.IsEnabled = false;
         }
 
         private void explicitShutdownButton_Click(object sender, RoutedEventArgs e)

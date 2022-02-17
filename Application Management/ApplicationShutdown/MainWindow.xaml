@@ -15,7 +15,7 @@
             <Label HorizontalAlignment="Left">Application Exit Code (for explicit shutdown):</Label>
             <TextBox HorizontalAlignment="Left" Name="appExitCodeTextBox">0</TextBox>
         </StackPanel>
-        <Button DockPanel.Dock="Top" Click="newWindowButton_Click">New Window</Button>
+        <Button Name="newWindow" DockPanel.Dock="Top" Click="newWindowButton_Click">New Window</Button>
         <Button DockPanel.Dock="Top" Click="explicitShutdownButton_Click">Shutdown Explicitly (Passing Exit Code)</Button>
         <Canvas />
     </DockPanel>
