@@ -16,7 +16,7 @@
           This is a right-to-left TextBlock
         </TextBlock>
 
-        <TextBlock Grid.Column="1" FlowDirection="LeftToRight">
+        <TextBlock Grid.Column="1" >
           This is a left-to-right TextBlock
         </TextBlock>
     </Grid>

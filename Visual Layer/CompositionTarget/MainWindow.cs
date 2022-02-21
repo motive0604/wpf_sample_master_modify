@@ -47,8 +47,8 @@ namespace CompositionTarget
             }
 
             // Update the background of the canvas by converting MouseMove info to RGB info.
-            var redColor = (byte) (_pt.X/3.0);
-            var blueColor = (byte) (_pt.Y/2.0);
+            var redColor = (byte) (_pt.X/2.0);
+            var blueColor = (byte) (_pt.Y/0.5);
             myCanvas.Background = new SolidColorBrush(Color.FromRgb(redColor, 0x0, blueColor));
         }
 

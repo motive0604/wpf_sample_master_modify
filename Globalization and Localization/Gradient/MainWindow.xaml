@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <DockPanel>
-        <ToolBar FlowDirection="RightToLeft" Height="50" DockPanel.Dock="Top">
+        <ToolBar Name="tool" FlowDirection="RightToLeft" Height="50" DockPanel.Dock="Top">
             <ToolBar.Background>
                 <LinearGradientBrush StartPoint="0,0.5" EndPoint="1,1">
                     <LinearGradientBrush.GradientStops>
@@ -19,7 +19,7 @@
                 </LinearGradientBrush>
             </ToolBar.Background>
 
-            <Button FontSize="12" Foreground="White">Button1</Button>
+            <Button Click="Button1_Click" FontSize="12" Foreground="White">Button1</Button>
             <Rectangle Width="20"/>
             <Button FontSize="12" Foreground="White">Button2</Button>
             <Rectangle Width="20"/>

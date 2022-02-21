@@ -66,7 +66,7 @@ namespace MergedResources
 
         private void Add2NewD(object sender, RoutedEventArgs e)
         {
-            ChangeRd(_rd, "BodyBrush", new SolidColorBrush(Colors.Green));
+            ChangeRd(_rd, "BodyBrush", new SolidColorBrush(Colors.Lime));
         }
     }
 }

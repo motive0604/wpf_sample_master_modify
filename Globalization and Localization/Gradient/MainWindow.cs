@@ -14,5 +14,19 @@ namespace Gradient
         {
             InitializeComponent();
         }
+
+        private void Button1_Click(object sender, RoutedEventArgs e)
+        {
+            if (tool.FlowDirection == FlowDirection.RightToLeft)
+                tool.FlowDirection = FlowDirection.LeftToRight;
+            else
+                tool.FlowDirection = FlowDirection.RightToLeft;
+      
+        }
+
+        private void Button2_Click(object sender, RoutedEventArgs e)
+        {
+         
+        }
     }
 }

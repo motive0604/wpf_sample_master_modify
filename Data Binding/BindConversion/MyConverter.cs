@@ -12,12 +12,14 @@ namespace BindConversion
 {
     public class MyConverter : IValueConverter
     {
+        public static CultureInfo cul;
         public object Convert(object o, Type type,
             object parameter, CultureInfo culture)
         {
 
             var date = (DateTime) o;
             Console.WriteLine(type.Name);
+            culture = cul;
             switch (type.Name)
             {
                 case "String":

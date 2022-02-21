@@ -36,8 +36,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -47,6 +45,7 @@
     <Compile Include="MyShape.cs" />
     <Compile Include="MyWindow.cs" />
     <Compile Include="Program.cs" />
+    <EmbeddedResource Include="Form1.resx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

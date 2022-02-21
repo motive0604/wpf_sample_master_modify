@@ -93,5 +93,20 @@ namespace AnnotatedDocumentViewer
             view.SortDescriptions.Clear();
             view.SortDescriptions.Add(sortDescription);
         }
+
+        private void ComboBoxItem_Selected(object sender, RoutedEventArgs e)
+        {
+            flowDocumentReader.Zoom = 10;
+        }
+
+        private void ComboBoxItem_Selected_1(object sender, RoutedEventArgs e)
+        {
+            flowDocumentReader.Zoom = 100;
+        }
+
+        private void ComboBoxItem_Selected_2(object sender, RoutedEventArgs e)
+        {
+            flowDocumentReader.Zoom = 200;
+        }
     }
 }
