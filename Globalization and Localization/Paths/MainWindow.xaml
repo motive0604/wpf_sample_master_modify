@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <StackPanel FlowDirection="RightToLeft">
-        <Path Stroke="Blue" StrokeThickness="4">
+        <Path Name="BB" Stroke="Blue" StrokeThickness="4">
             <Path.Data>
                 <GeometryGroup >
                     <LineGeometry StartPoint="300,10" EndPoint="350,30" />
@@ -17,7 +17,7 @@
             </Path.Data>
         </Path>
 
-        <Path Stroke="Red" StrokeThickness="4" FlowDirection="RightToLeft">
+        <Path Name="RR" Stroke="Red" StrokeThickness="4" FlowDirection="RightToLeft">
             <Path.Data>
                 <GeometryGroup >
                     <LineGeometry StartPoint="300,10" EndPoint="350,30" />
@@ -27,7 +27,7 @@
             </Path.Data>
         </Path>
 
-        <Path Stroke="Green" StrokeThickness="4" FlowDirection="LeftToRight">
+        <Path Name="GG" Stroke="Green" StrokeThickness="4" FlowDirection="LeftToRight">
             <Path.Data>
                 <GeometryGroup >
                     <LineGeometry StartPoint="300,10" EndPoint="350,30" />
@@ -36,5 +36,10 @@
                 </GeometryGroup>
             </Path.Data>
         </Path>
+        <Grid>
+            <Button Click="Blue_Click" Margin="320,20,0,0" Width="100" Height="30" FontSize="12" Background="Blue" Foreground="White">Blue</Button>
+            <Button Click="Red_Click" Margin="0,20,0,0" Width="100" Height="30" FontSize="12" Background="Red" Foreground="White">Red</Button>
+            <Button Click="Green_Click" Margin="0,20,320,0" Width="100" Height="30" FontSize="12" Background="Green" Foreground="White">Green</Button>
+        </Grid>
     </StackPanel>
 </Window>

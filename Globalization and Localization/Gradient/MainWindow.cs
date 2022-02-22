@@ -2,6 +2,7 @@
 // // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using System.Windows;
+using System.Windows.Media;
 
 namespace Gradient
 {
@@ -26,7 +27,28 @@ namespace Gradient
 
         private void Button2_Click(object sender, RoutedEventArgs e)
         {
-         
+            if (tool.Height == 50)
+                tool.Height = 70;
+            else
+                tool.Height = 50;
+        }
+        int x = 0;
+
+        private void Button3_Click(object sender, RoutedEventArgs e)
+        {
+            if (x == 1)
+            {
+                col1.Color = Colors.DarkRed;
+                col2.Color = Colors.DarkBlue;
+                x = 0;
+            }
+            else
+            {
+                col1.Color = Colors.Yellow;
+                col2.Color = Colors.Lime;
+                x = 1;
+            }
+
         }
     }
 }

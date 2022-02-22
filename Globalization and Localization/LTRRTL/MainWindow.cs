@@ -14,5 +14,21 @@ namespace LTRRTL
         {
             InitializeComponent();
         }
+        int a = 0;
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if (a == 1)
+            {
+                LTR.FlowDirection = FlowDirection.RightToLeft;
+                RTR.FlowDirection = FlowDirection.LeftToRight;
+                a = 0;
+            }
+            else
+            {
+                LTR.FlowDirection = FlowDirection.LeftToRight;
+                RTR.FlowDirection = FlowDirection.RightToLeft;
+                a = 1;
+            }
+        }
     }
 }

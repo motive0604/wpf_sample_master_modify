@@ -27,7 +27,8 @@
             Foreground="{Binding Path=TheDate, Converter={StaticResource MyConverterReference}}">
             <TextBlock.Text>
                 <Binding Path="TheDate"
-               Converter="{StaticResource MyConverterReference}"/>
+               Converter="{StaticResource MyConverterReference}"
+                         ConverterCulture="en-US"/>
             </TextBlock.Text>
         </TextBlock>
         <RadioButton Checked="RadioButton_Checked">Eng</RadioButton>

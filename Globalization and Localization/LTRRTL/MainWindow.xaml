@@ -12,15 +12,18 @@
     The following examples demonstrate:
         </TextBlock>
 
-        <TextBlock Background="DarkBlue" Foreground="LightBlue" 
+        <TextBlock Name="LTR" Background="DarkBlue" Foreground="LightBlue" 
    FontSize="20" FlowDirection="LeftToRight">
         This is a left-to-right TextBlock
         </TextBlock>
 
-        <TextBlock Background="LightBlue" Foreground="DarkBlue"
+        <TextBlock Name="RTR" Background="LightBlue" Foreground="DarkBlue"
    FontSize="20" FlowDirection="RightToLeft">
         This is a right-to-left TextBlock
         </TextBlock>
+
+        <Button Click="Button_Click"  Margin="30,30,0,0" Width="100" FontSize="20" Foreground="Blue" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}">Button1
+        </Button>
 
     </StackPanel>
 </Window>

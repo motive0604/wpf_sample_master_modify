@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Image"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
-    <StackPanel FlowDirection="RightToLeft">
+    <StackPanel FlowDirection="RightToLeft" Visibility="Visible">
         <Image Source="ms_logo.jpg" 
          Width="147" Height="50"/>
         <Separator Height="10"/>
@@ -15,5 +15,21 @@
         <Separator Height="10"/>
         <Image Source="ms_logo.jpg" 
          Width="147" Height="50" FlowDirection="RightToLeft"/>
+        <Separator Height="10"/>
+        <Image Source="ms_logo.jpg" 
+         Width="147" Height="50" Opacity="0.3"/>
+        <Separator Height="10"/>
+        <Image Source="ms_logo.jpg" 
+         Width="147" Height="50" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="180"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+
     </StackPanel>
 </Window>

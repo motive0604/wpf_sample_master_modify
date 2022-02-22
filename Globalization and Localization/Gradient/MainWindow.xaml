@@ -11,8 +11,8 @@
             <ToolBar.Background>
                 <LinearGradientBrush StartPoint="0,0.5" EndPoint="1,1">
                     <LinearGradientBrush.GradientStops>
-                        <GradientStop Color="DarkRed" Offset="0" />
-                        <GradientStop Color="DarkBlue" Offset="0.3" />
+                        <GradientStop x:Name="col1" Color="DarkRed" Offset="0" />
+                        <GradientStop x:Name="col2" Color="DarkBlue" Offset="0.3" />
                         <GradientStop Color="LightBlue" Offset="0.6" />
                         <GradientStop Color="White" Offset="1" />
                     </LinearGradientBrush.GradientStops>
@@ -21,9 +21,9 @@
 
             <Button Click="Button1_Click" FontSize="12" Foreground="White">Button1</Button>
             <Rectangle Width="20"/>
-            <Button FontSize="12" Foreground="White">Button2</Button>
+            <Button Click="Button2_Click" FontSize="12" Foreground="White">Button2</Button>
             <Rectangle Width="20"/>
-            <Button FontSize="12" Foreground="White">Button3</Button>
+            <Button Click="Button3_Click"  FontSize="12" Foreground="White">Button3</Button>
             <Rectangle Width="20"/>
             <Button FontSize="12" Foreground="White">Button4</Button>
             <Rectangle Width="20"/>
