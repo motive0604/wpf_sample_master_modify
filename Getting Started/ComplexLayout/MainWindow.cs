@@ -2,6 +2,7 @@
 // // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using System.Windows;
+using System.Windows.Media;
 
 namespace ComplexLayout
 {
@@ -13,6 +14,20 @@ namespace ComplexLayout
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Button1_Click(object sender, RoutedEventArgs e)
+        {
+            LV.Background = Brushes.Aqua;
+        }
+        int a = 0;
+        private void Button2_Click(object sender, RoutedEventArgs e)
+        {
+            if (a == 0)
+            {
+                LG.Text += "-By Hallym";
+                a++;
+            }
         }
     }
 }

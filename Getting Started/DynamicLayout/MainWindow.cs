@@ -14,10 +14,25 @@ namespace DynamicLayout
         {
             InitializeComponent();
         }
+        int a = 0;
 
         private void HandleClick(object sender, RoutedEventArgs e)
         {
-            Button1.Content = "Hello World";
+            if (a == 0) 
+            {
+                Button1.Content = "Hello World";
+                a++;
+            }
+            else if (a == 1) 
+            {
+                Button1.Content = "Hallym";
+                a++;
+            }
+            else if (a == 2)
+            {
+                Button1.Content = "Retry!";
+                a--;
+            }
         }
     }
 }

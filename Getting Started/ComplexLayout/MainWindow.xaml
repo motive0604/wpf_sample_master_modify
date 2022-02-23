@@ -11,20 +11,22 @@
                 DockPanel.Dock="Top">Some Text</TextBlock>
         <TextBlock DockPanel.Dock="Bottom"
                 Background="LightYellow">Some text at the bottom of the page.</TextBlock>
-        <TextBlock DockPanel.Dock="Left"
+        <TextBlock Name="LV" DockPanel.Dock="Left"
                 Background="Lavender">Some More Text</TextBlock>
         <DockPanel Background="Bisque">
             <StackPanel DockPanel.Dock="Top">
                 <Button HorizontalAlignment="Left" 
                 Height="30px"
                 Width="100px"
+                Click="Button1_Click"
                 Margin="10,10,10,10">Button1</Button>
                 <Button HorizontalAlignment="Left"
                 Height="30px"
                 Width="100px"
+                Click="Button2_Click"
                 Margin="10,10,10,10">Button2</Button>
             </StackPanel>
-            <TextBlock Background="LightGreen">Some Text Below the Buttons</TextBlock>
+            <TextBlock Name="LG" Background="LightGreen">Some Text Below the Buttons</TextBlock>
         </DockPanel>
     </DockPanel>
 </Window>
