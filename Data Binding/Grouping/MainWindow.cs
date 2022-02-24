@@ -12,6 +12,7 @@ namespace Grouping
     public partial class MainWindow : Window
     {
         private CollectionView _myView;
+        
 
         public MainWindow()
         {

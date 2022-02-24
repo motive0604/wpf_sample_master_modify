@@ -39,7 +39,7 @@ namespace FormattedTextExample
         private void DrawFormattedText(DpiScale dpiInfo)
         {
             FormattedText formattedText = new FormattedText(
-                "FABLE",
+                "Hallym",
                 new System.Globalization.CultureInfo("en-US"),
                 FlowDirection.LeftToRight,
                 new Typeface(

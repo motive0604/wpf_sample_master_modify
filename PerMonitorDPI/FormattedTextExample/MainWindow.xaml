@@ -49,7 +49,7 @@
                                 <Storyboard x:Name="storyboard">
                                     <MatrixAnimationUsingPath 
                   x:Name="matrixAnimation"
-                  Duration="0:00:59" 
+                  Duration="0:00:10" 
                   RepeatBehavior="Forever"
                   Storyboard.TargetProperty="RenderTransform.Matrix" />
                                 </Storyboard>

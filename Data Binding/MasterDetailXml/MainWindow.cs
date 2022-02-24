@@ -12,7 +12,7 @@ namespace MasterDetailXml
     {
         public MainWindow()
         {
-            InitializeComponent();
+            
         }
     }
 }

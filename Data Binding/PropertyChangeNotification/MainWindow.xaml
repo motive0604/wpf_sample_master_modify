@@ -28,5 +28,6 @@
              Width="315" Height="80"
              ItemsSource="{Binding Source={StaticResource MyDataSource}}"
              ItemTemplate="{StaticResource BidItemDataTemplate}"/>
+        <Button DockPanel.Dock="Top" Click="ADD_Click" Width="80" Height="25">ADD</Button>
     </DockPanel>
 </Window>

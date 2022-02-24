@@ -14,5 +14,10 @@ namespace PropertyChangeNotification
         {
             InitializeComponent();
         }
+
+        private void ADD_Click(object sender, RoutedEventArgs e)
+        {
+            BidCollection.adds();
+        }
     }
 }

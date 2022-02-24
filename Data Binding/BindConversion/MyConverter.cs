@@ -13,24 +13,22 @@ namespace BindConversion
     public class MyConverter : IValueConverter
     {
         public static CultureInfo cul;
+        
         public object Convert(object o, Type type,
-            object parameter, CultureInfo culture)
+            object parameter, CultureInfo cul)
         {
-
             var date = (DateTime) o;
             Console.WriteLine(type.Name);
-            culture = cul;
             switch (type.Name)
             {
                 case "String":
-                    return date.ToString("F",culture);
+                    return date.ToString("F",cul);
                 case "Brush":
                     return Brushes.Red;
                 default:
                     return o;
             }
         }
-
 
         public object ConvertBack(object o, Type type,
             object parameter, CultureInfo culture) => null;

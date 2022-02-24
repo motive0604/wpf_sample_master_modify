@@ -28,11 +28,11 @@
             <TextBlock.Text>
                 <Binding Path="TheDate"
                Converter="{StaticResource MyConverterReference}"
-                         ConverterCulture="en-US"/>
+                         ConverterCulture="ko-KR"/>
             </TextBlock.Text>
         </TextBlock>
-        <RadioButton Checked="RadioButton_Checked">Eng</RadioButton>
-        <RadioButton Checked="RadioButton_Checked_3">한글</RadioButton>
+        <RadioButton Name="aa" Checked="RadioButton_Checked">Eng</RadioButton>
+        <RadioButton>한글</RadioButton>
 
     </StackPanel>
 </Window>
